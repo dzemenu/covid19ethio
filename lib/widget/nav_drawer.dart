@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'personal_diagonsis.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -32,6 +33,16 @@ class NavDrawer extends StatelessWidget {
               leading: Icon(Icons.local_pharmacy),
               title: Text('የበሽታው ምልክቶች'),
               onTap: () => {Navigator.of(context).pop()},
+            ),
+            ListTile(
+              leading: Icon(Icons.local_pharmacy),
+              title: Text('Symptoms Diagnosis'),
+              onTap: () => {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PersonalDiagnosis()))
+              },
             ),
             ListTile(
               leading: Icon(Icons.help),
